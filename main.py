@@ -4,7 +4,7 @@ from fastapi.security import APIKeyHeader
 app = FastAPI()
 
 # Set your desired API key here
-API_KEY = "Hitarth123"
+API_KEY = "QcpkfjphlC19vJoUfwDadLbmZDrmFdjCsEjfdmmc1YQlmw6SKl"
 api_key_header = APIKeyHeader(name="X-API-Key", auto_error=False)
 
 # Auth function
@@ -14,8 +14,7 @@ async def verify_api_key(api_key: str = Depends(api_key_header)):
     return api_key
 
 def run_main_script_logic():
-    # Your secure logic here
-    return {"status": "Script logic executed", "data": [1, 2, 3]}
+    return {"status": "Script logic executed", "data": None}
 
 @app.get("/")
 async def root():
