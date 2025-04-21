@@ -41,7 +41,7 @@ Main = "ng-app=CRMPortal"
 Main_header = APIKeyHeader(name="Header", auto_error=False)
 
 # Auth function
-async def scanning_webpage(header: str = Depends(Main_header)):
+async def scanning_webpage(header: str = Depends(Main_header), webcontent):
     if header != Main:
         raise HTTPException(status_code=403, detail="HTML Error")
     return header
@@ -56,6 +56,6 @@ async def root():
 
 # Secure route
 @app.get("/secure")
-async def secure_route(header: str = Depends(scanning_webpage)):
+async def secure_route(header: str = Depends(scanning_webpage), webcontent):
     result = webpage_parsing()
     return result
