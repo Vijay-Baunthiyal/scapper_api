@@ -31,6 +31,18 @@
 #     return result
 
 
+# div1 - add comment
+# div2 - add comment click
+# div3 - post comment
+# div4 - save commnet
+# div5 - review bill
+# div6 - approve bill
+# div7 - confirm approval
+# div8 - reviewbill
+# div9 - reviewbill
+# div10 - reviewbill
+
+
 from fastapi import FastAPI, Depends, HTTPException, Request
 from fastapi.security import APIKeyHeader
 
@@ -41,13 +53,15 @@ Main = "ng-app=CRMPortal"
 Main_header = APIKeyHeader(name="Header", auto_error=False)
 
 # Auth function
-async def scanning_webpage(header: str = Depends(Main_header), webcontent):
+async def scanning_webpage(header: str = Depends(Main_header)):
     if header != Main:
         raise HTTPException(status_code=403, detail="HTML Error")
     return header
 
 def webpage_parsing():
-    return {"status": "parsing completed", "webpage_elements": {'addcomment': 'div.btn-group:nth-child(7) > button:nth-child(2)', 'b':2, 'c':3}}
+
+    return {"status": "parsing completed", "webpage_elements": {'div1': 'div.btn-group:nth-child(7) > button:nth-child(2)', 'div2':'div.btn', 'div3':'div.btn'
+    , 'div4':'div.btn', 'div5':'div.btn', 'div6':'div.btn', 'div7':'div.btn', 'div8':'div.btn'}}
 
 
 @app.get("/")
@@ -56,6 +70,6 @@ async def root():
 
 # Secure route
 @app.get("/secure")
-async def secure_route(header: str = Depends(scanning_webpage), webcontent):
+async def secure_route(header: str = Depends(scanning_webpage)):
     result = webpage_parsing()
     return result
