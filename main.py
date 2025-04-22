@@ -60,7 +60,8 @@ async def scanning_webpage(header: str = Depends(Main_header)):
 
 def webpage_parsing():
 
-    return {"status": "parsing completed", "webpage_elements": {'div1': 'div.btn-group:nth-child(7) > button:nth-child(2)', 'div2':'div.btn', 'div3':'div.btn'
+    return {"status": "parsing completed", "webpage_elements": {'div1': 'div.btn-group:nth-child(7) > button:nth-child(2)', 'div2':'div.btn-group:nth-child(7) > ul:nth-child(3) > li:nth-child(1) > a:nth-child(1) > ng-transclude:nth-child(1) > a:nth-child(1)'
+    , 'div3':'div.btn'
     , 'div4':'div.btn', 'div5':'div.btn', 'div6':'div.btn', 'div7':'div.btn', 'div8':'div.btn'}}
 
 
