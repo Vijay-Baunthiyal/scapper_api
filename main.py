@@ -45,7 +45,6 @@
 
 from fastapi import FastAPI, Depends, HTTPException, Request
 from fastapi.security import APIKeyHeader
-from selenium.webdriver.common.keys import Keys
 
 app = FastAPI()
 
@@ -65,7 +64,7 @@ def webpage_parsing(selector):
     , 'div3':'#text', 'div4':'body > div.modal.fade.app-modal-window.in > div > div > div.modal-footer > button.btn.btn-default', 'div5':'div.btn', 'div6':'div.btn', 'div7':'div.btn', 'div8':'div.btn'}
     , "webform": {'dynamic' :'Keys.TAB', 'div1': '#crmportal-container > div > div > div.main.crmportal-content-main.col-xs-offset-3.col-md-offset-2 > div > workspace > div.row > tile:nth-child(16) > div > div.panel-heading.ws-tile-heading-container > div.pull-right.ws-tile-options.btn-group > button.btn.btn-primary.btn-xs.glyphicon.glyphicon-plus.dropdown-toggle'
                                         ,'div2': '#crmportal-container > div > div > div.main.crmportal-content-main.col-xs-offset-3.col-md-offset-2 > div > workspace > div.row > tile:nth-child(16) > div > div.panel-heading.ws-tile-heading-container > div.pull-right.ws-tile-options.btn-group.open > ul > li:nth-child(2) > span > a'
-                                        ,'div3': '#amount', 'div4': '#targetAccountId > div > div > input', 'div5': 'Keys.TAB'}}
+                                        ,'div3': '#amount', 'div4': '#targetAccountId > div > div > input'}}
 
 
 @app.get("/")
