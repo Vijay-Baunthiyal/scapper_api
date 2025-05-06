@@ -2,4 +2,3 @@ fastapi
 uvicorn
 gunicorn
 python-dotenv
-selenium==4.24.0
