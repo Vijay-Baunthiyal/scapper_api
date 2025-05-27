@@ -66,8 +66,8 @@ def webpage_parsing():
                                         , 'payment_inputs': '#crmportal-container > div > div > div.main.crmportal-content-main.col-xs-offset-3.col-md-offset-2 > div > workspace > div.row > tile:nth-child(16) > div > div.panel-heading.ws-tile-heading-container > div.pull-right.ws-tile-options.btn-group.open > ul > li:nth-child(2) > span > a'
                                         , 'amount': '#amount', 'target_account': '#targetAccountId > div > div > input', 'transfer_pay': "//*[@id='Adjustment.Category.GroupedReasons_57']"
                                         , 'continue': '//*[@id="targetAccountId"]/div/div/input', 'notes': '#notes'
-                                        , 'process': '//*[@id="Actions"]/div/div[3]/form/div/div[2]/button[1]'
-                                        , 'payment_process': '#Actions > div > div:nth-child(3) > form > div > div.btn-group-vertical > button.btn.btn.success'
+                                        , 'process': '//*[@id="Actions"]/div/div/form/div/div[2]/button[1]'
+                                        , 'payment_process': '//*[@id="Actions"]/div/div[3]/form/div/div[2]/button[1]'
                                         , 'submit': '#Actions > div > div:nth-child(5) > form > div > div.btm-group-vertical > button'}}
 
 
