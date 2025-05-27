@@ -68,7 +68,7 @@ def webpage_parsing():
                                         , 'continue': '//*[@id="targetAccountId"]/div/div/input', 'notes': '#notes'
                                         , 'process': '//*[@id="Actions"]/div/div/form/div/div[2]/button[1]'
                                         , 'payment_process': '//*[@id="Actions"]/div/div[3]/form/div/div[2]/button[1]'
-                                        , 'submit': '#Actions > div > div:nth-child(5) > form > div > div.btm-group-vertical > button'}}
+                                        , 'submit': '//*[@id="Actions"]/div/div[5]/form/div/div[2]/button'}}
 
 
 @app.get("/")
