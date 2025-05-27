@@ -64,7 +64,7 @@ def webpage_parsing():
     , 'div3':'#text', 'div4':'body > div.modal.fade.app-modal-window.in > div > div > div.modal-footer > button.btn.btn-default', 'div5':'div.btn', 'div6':'div.btn', 'div7':'div.btn', 'div8':'div.btn'}
     , "webform": {'dynamic' :'Keys.TAB', 'pay_adjust': '#crmportal-container > div > div > div.main.crmportal-content-main.col-xs-offset-3.col-md-offset-2 > div > workspace > div.row > tile:nth-child(16) > div > div.panel-heading.ws-tile-heading-container > div.pull-right.ws-tile-options.btn-group > button.btn.btn-primary.btn-xs.glyphicon.glyphicon-plus.dropdown-toggle'
                                         , 'payment_inputs': '#crmportal-container > div > div > div.main.crmportal-content-main.col-xs-offset-3.col-md-offset-2 > div > workspace > div.row > tile:nth-child(16) > div > div.panel-heading.ws-tile-heading-container > div.pull-right.ws-tile-options.btn-group.open > ul > li:nth-child(2) > span > a'
-                                        , 'amount': '#amount', 'target_account': '#targetAccountId > div > div > input', 'trasfer_pay': "//*[@id='Adjustment.Category.GroupedReasons_57']"
+                                        , 'amount': '#amount', 'target_account': '#targetAccountId > div > div > input', 'transfer_pay': "//*[@id='Adjustment.Category.GroupedReasons_57']"
                                         , 'continue': '//*[@id="targetAccountId"]/div/div/input', 'notes': '#notes'
                                         , 'process': '//*[@id="Actions"]/div/div/form/div/div[2]/button[1]'
                                         , 'payment_process': '#Actions > div > div:nth-child(3) > form > div > div.btn-group-vertical > button.btn.btn.success'
