@@ -45,6 +45,7 @@
 
 from fastapi import FastAPI, Depends, HTTPException, Request
 from fastapi.security import APIKeyHeader
+from selenium.webdriver.common.keys import Keys
 
 app = FastAPI()
 
